@@ -1,5 +1,4 @@
 import turtle
-from pymunk.vec2d import Vec2d
 
 Minimum_branch_length = 5
 
@@ -13,6 +12,8 @@ t2 = turtle.Turtle()
 t2.pensize(3)
 t2.setheading(90)
 t2.color("blue")
+t1.speed(0)
+t2.speed(0)
 window.bgcolor("black")
 Stamps = 0
 
@@ -48,11 +49,9 @@ def fractal(t, z, branch_length, shorten_by, angle):
             Stamps = Stamps + 1
             print(Stamps)
             if Stamps == 256:
-                raise SystemExit
-            #print(p1)
-            #print(p2)
-            #if p1 == Vec2d(70.80,141.29) and p2 == Vec2d(-70.80,141.29):
-            #    raise SystemExit
+                turtle.done()
+
+
 
 
 
